@@ -22,6 +22,7 @@ public class UserService {
         PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 
         User savedUser = User.builder()
+                .username(request.getUsername())
                 .email(request.getEmail())
                 .password(passwordEncoder.encode(request.getPassword()))
                 .role(request.getRole())

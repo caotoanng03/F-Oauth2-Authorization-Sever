@@ -52,7 +52,7 @@ public class AuthorizationServerConfig {
     private static final String CLIENT_HOST_URL = "http://localhost:8083";
 
     private final String[] WHITE_LIST = {
-            "/users", "/h2-console/**"
+            "/users", "/h2-console/**", "/oauth2/jwks"
     };
 
     @Bean

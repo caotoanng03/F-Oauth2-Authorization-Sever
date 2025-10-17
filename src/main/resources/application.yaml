@@ -5,6 +5,12 @@ server:
 spring:
   application:
     name: auth-server
+
+  security:
+    oauth2:
+      authorizationserver:
+        issuer: http://127.0.0.1:8081
+
   datasource:
     driver-class-name: org.h2.Driver
     url: jdbc:h2:mem:demo_db
