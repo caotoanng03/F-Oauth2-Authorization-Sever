@@ -68,7 +68,9 @@ public class AuthorizationServerConfig {
                         .anyRequest().authenticated()
                 )
                 .with(authorizationServerConfigurer, authorizationServer -> authorizationServer
-                        .oidc(Customizer.withDefaults())
+                        .oidc(oidc -> oidc
+                                .logoutEndpoint(Customizer.withDefaults())
+                        )
                 )
                 .exceptionHandling((exceptions) -> exceptions
                         .defaultAuthenticationEntryPointFor(
